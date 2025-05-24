@@ -25,7 +25,6 @@ Hinstop is a Python module for Hindi text preprocessing that combines stopword r
 ---
 ## Example : Analyzing Hindi Text
 ````
-```python
 from Hinstop.processor import Analyzer
 
 text = "यह एक बहुत अच्छा दिन है लेकिन थोड़ी परेशानी भी थी।"
@@ -51,30 +50,27 @@ print(result)
     'Negative Count': 1
   }
 }
-
 ````
 
 
 ---
-# 📂 Project Structure
+# Functionality Overview
 
-Hinstop/
-├── processor.py              # Main module with StopwordRemover and Analyzer classes
-│
-├── utils/                    # Utility functions
-│   ├── __init__.py
-│   └── loader.py             # Functions to load stopword, positive, and negative word lists
-│
-├── data/                     # Default word lists
-│   ├── stopwords.txt         # Default Hindi stopwords
-│   ├── positive.txt          # Optional list of positive sentiment words
-│   └── negative.txt          # Optional list of negative sentiment words
-│
-├── test/                     # Demos and test scripts
-│   ├── __init__.py
-│   ├── demo.py               # Example script to test the module
-│   └── demo.ipynb            # Jupyter notebook demo
-│
-├── __init__.py               # Package initializer
-└── README.md                 # Project documentation
+# StopwordRemover
+Handles basic text preprocessing by removing Hindi stopwords.
+
+Method	Description
+__init__(...)	Initializes with either a default or user-defined stopword list.
+remove(text)	Removes stopwords from the input Hindi text and returns the cleaned version.
+coverage(text)	Calculates the percentage of stopwords in the input text (i.e., how “noisy” the text is).
+
+# Analyzer (extends StopwordRemover)
+Adds sentiment analysis functionality using positive and negative word matching.
+
+Method	Description
+__init__(...)	Initializes the analyzer with optional positive and negative word lists, and inherits stopword handling.
+positive_score(text)	Counts how many positive words are present in the text.
+negative_score(text)	Counts how many negative words are present in the text.
+sentiment_score(text)	Calculates a sentiment score and label (positive, negative, or neutral) based on word counts.
+analyze(text)	Returns a complete analysis of the text: cleaned version, stopword coverage, sentiment label, score, and word counts.
 
