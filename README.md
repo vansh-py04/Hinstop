@@ -38,6 +38,22 @@ result = analyzer.analyze(text)
 print(result)
 ````
 
+## Output
+
+````
+{
+  'cleaned': 'अच्छा दिन थोड़ी परेशानी थी।',
+  'coverage': 0.5,
+  'sentiment': {
+    'Score': 0.5,
+    'Label': 'neutral',
+    'Positive Count': 1,
+    'Negative Count': 1
+  }
+}
+
+````
+
 
 ---
 # 📂 Project Structure
