@@ -42,5 +42,4 @@ Hinstop/
 │   └── negative.txt
 
 └── test/
-
     └── demo.ipynb        # Interactive demo notebook
