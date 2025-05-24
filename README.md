@@ -22,3 +22,17 @@ Hinstop is a Python module for Hindi text preprocessing that combines stopword r
 ## Clone the repository:
    git clone https://github.com/vansh-py04/hinstop.git
    cd hinstop
+   
+---
+# 📂 Project Structure
+
+Hinstop/
+├── processor.py          # Main module (StopwordRemover & Analyzer)
+├── utils/
+│   └── loader.py         # Loads stopword/lexicon files
+├── data/
+│   ├── stopwords.txt     # Default stopword list
+│   ├── positive.txt      # Optional sentiment words
+│   └── negative.txt
+└── test/
+    └── demo.ipynb        # Interactive demo notebook
