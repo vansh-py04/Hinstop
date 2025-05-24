@@ -2,19 +2,17 @@
 Hinstop is a Python module for Hindi text preprocessing that combines stopword removal with lightweight sentiment scoring. Designed for developers and researchers working on Indic NLP, Hinstop offers an extensible interface similar to nltk or indicNLP, with additional support for custom stopword and sentiment lexicons.
 
 ✨ Features
- Stopword Removal — Remove common Hindi stopwords using a curated list.
+  1. Stopword Removal — Remove common Hindi stopwords using a curated list.
 
- Custom Stopword Lists — Load your own stopwords for domain-specific filtering.
+  2. Custom Stopword Lists — Load your own stopwords for domain-specific filtering.
 
- Sentiment Scoring — Match positive and negative words to compute simple sentiment scores.
+  3. Sentiment Scoring — Match positive and negative words to compute simple sentiment scores.
 
- Stopword Coverage — Estimate how noisy a text is based on stopword density.
+  4. Stopword Coverage — Estimate how noisy a text is based on stopword density.
 
- Modular Design — Use StopwordRemover or Analyzer classes independently.
+  5. Modular Design — Use StopwordRemover or Analyzer classes independently.
 
- Batch Support — Analyze multiple sentences or documents easily.
-
- Plug-and-Play — Integrates well into any preprocessing pipeline.
+  6. Plug-and-Play — Integrates well into any preprocessing pipeline.
 
 ---
 # 📦 Installation
@@ -56,21 +54,15 @@ print(result)
 ---
 # Functionality Overview
 
-# StopwordRemover
-Handles basic text preprocessing by removing Hindi stopwords.
+| Method                       | Description                                                                 |
+| ---------------------------- | --------------------------------------------------------------------------- |
+| `StopwordRemover.__init__()` | Initializes with default or custom stopword list and sets language          |
+| `StopwordRemover.remove()`   | Removes all stopwords from the input Hindi text                             |
+| `StopwordRemover.coverage()` | Calculates the ratio of stopwords in the input text (i.e., noise level)     |
+| `Analyzer.__init__()`        | Inherits from `StopwordRemover`; adds support for sentiment word lists      |
+| `Analyzer.positive_score()`  | Returns the number of matched positive words in the input text              |
+| `Analyzer.negative_score()`  | Returns the number of matched negative words in the input text              |
+| `Analyzer.sentiment_score()` | Computes sentiment polarity (`positive`, `negative`, `neutral`) and score   |
+| `Analyzer.analyze()`         | Performs full analysis: cleaned text, stopword coverage, and sentiment info |
 
-Method	Description
-__init__(...)	Initializes with either a default or user-defined stopword list.
-remove(text)	Removes stopwords from the input Hindi text and returns the cleaned version.
-coverage(text)	Calculates the percentage of stopwords in the input text (i.e., how “noisy” the text is).
-
-# Analyzer (extends StopwordRemover)
-Adds sentiment analysis functionality using positive and negative word matching.
-
-Method	Description
-__init__(...)	Initializes the analyzer with optional positive and negative word lists, and inherits stopword handling.
-positive_score(text)	Counts how many positive words are present in the text.
-negative_score(text)	Counts how many negative words are present in the text.
-sentiment_score(text)	Calculates a sentiment score and label (positive, negative, or neutral) based on word counts.
-analyze(text)	Returns a complete analysis of the text: cleaned version, stopword coverage, sentiment label, score, and word counts.
 
