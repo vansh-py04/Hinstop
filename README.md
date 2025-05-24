@@ -16,13 +16,10 @@ Hinstop is a Python module for Hindi text preprocessing that combines stopword r
 
 🔌 Plug-and-Play — Integrates well into any preprocessing pipeline.
 
+---
 📦 Installation
-🔧 Coming soon as a pip package
 
-For now, clone the repository:
+clone the repository:
 
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/hinstop.git
-cd hinstop
+ git clone https://github.com/yourusername/hinstop.git
+ cd hinstop
