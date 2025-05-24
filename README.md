@@ -24,16 +24,20 @@ Hinstop is a Python module for Hindi text preprocessing that combines stopword r
     cd hinstop
 ---
 ## Example : Analyzing Hindi Text
-    ```from Hinstop.processor import Analyzer
+````
+```python
+from Hinstop.processor import Analyzer
 
-    text = "यह एक बहुत अच्छा दिन है लेकिन थोड़ी परेशानी भी थी।"
-    positive = ["अच्छा", "शानदार"]
-    negative = ["परेशानी", "खराब"]
+text = "यह एक बहुत अच्छा दिन है लेकिन थोड़ी परेशानी भी थी।"
+positive = ["अच्छा", "शानदार"]
+negative = ["परेशानी", "खराब"]
 
-    analyzer = Analyzer(method="default", positive_words=positive, negative_words=negative)
-    result = analyzer.analyze(text)
+analyzer = Analyzer(method="default", positive_words=positive, negative_words=negative)
+result = analyzer.analyze(text)
 
-    print(result)```
+print(result)
+````
+
 
 ---
 # 📂 Project Structure
