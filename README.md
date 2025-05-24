@@ -66,3 +66,8 @@ print(result)
 | `Analyzer.analyze()`         | Performs full analysis: cleaned text, stopword coverage, and sentiment info |
 
 
+---
+# Credits :
+Built by [Yuganter Pratap ](https://www.linkedin.com/in/yuganter-pratap-a3a719254/)
+
+Shoutout to [Gene Diaz](https://github.com/stopwords-iso/stopwords-hi/blob/master/stopwords-hi.txt) for the StopWord list.
